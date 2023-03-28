@@ -6,7 +6,7 @@ import '../models/heroes.dart';
 class ScreenHero extends StatelessWidget {
   final Heroes _hero;
 
-  ScreenHero(this._hero);
+  ScreenHero(this._hero, {super.key});
   @override
   Widget build(BuildContext context) {
     return Hero(
