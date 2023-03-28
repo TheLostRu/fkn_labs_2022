@@ -6,13 +6,19 @@ import 'widgets/background_triangle.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+  Color bgColor = Colors.blue;
   runApp(ChangeNotifierProvider(
       create: (context) => ChangeColor(), child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return MyState();
+  }
+}
 
+class MyState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
